@@ -1,18 +1,17 @@
-alert("Baxodir mebel saytiga xush kelibsiz! 🛋️");
+let count = 0;
 
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".card button");
+const cart = document.getElementById("count");
+const cartBtn = document.getElementById("cartBtn");
 
-buttons.forEach(btn => {
-    btn.addEventListener("click", function () {
-        alert("Mahsulot savatchaga qo'shildi! 🛒");
-    });
+buttons.forEach(btn=>{
+btn.onclick=function(){
+count++;
+cart.innerHTML=count;
+alert("✅ Savatchaga qo'shildi");
+}
 });
 
-const navLinks = document.querySelectorAll("nav a");
-
-navLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-        alert(this.innerText + " sahifasi tez orada qo'shiladi.");
-    });
-});
+cartBtn.onclick=function(){
+alert("🛒 Savatchada "+count+" ta mahsulot bor.");
+}
