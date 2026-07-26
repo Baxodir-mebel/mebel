@@ -207,6 +207,56 @@ padding:20px;
 grid-template-columns:1fr;
 }
 
+  #cartBox{
+position:fixed;
+right:20px;
+top:90px;
+width:320px;
+background:white;
+border-radius:15px;
+padding:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+max-height:500px;
+overflow:auto;
+}
+
+.item{
+border-bottom:1px solid #ddd;
+padding:10px 0;
+}
+
+.item h3{
+margin-bottom:5px;
+}
+
+.item button{
+margin-top:10px;
+width:100%;
+padding:10px;
+background:red;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+#cartBox button:last-child{
+background:green;
+width:100%;
+padding:15px;
+margin-top:15px;
+font-size:18px;
+}
+
+@media(max-width:768px){
+
+#cartBox{
+position:static;
+width:100%;
+margin:20px auto;
+}
+
+}
 .card img{
 height:220px;
 }
