@@ -1,114 +1,229 @@
-User not found, [26/07/2026 14:34]
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxe Mebel — Zamonaviy Mebellar Do'koni</title>
-    <!-- CSS fayli -->
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome Ikonkalari -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BAXODIR MEBEL</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <!-- YUQORI QISM (HEADER) -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-couch"></i> Luxe<span>Mebel</span>
-            </a>
+<header>
 
-            <!-- Qidiruv paneli -->
-            <div class="search-box">
-                <input type="text" id="search-input" placeholder="Mebel qidirish...">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            </div>
+<div class="logo">
+🛋️ BAXODIR MEBEL
+</div>
 
-            <!-- Savatcha tugmasi -->
-            <button class="cart-btn" id="cart-toggle-btn">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span class="cart-count" id="cart-count">0</span>
-            </button>
-        </div>
-    </header>
 
-    <!-- HERO BANNER -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Uyingiz va Ofisingiz uchun Eksklyuziv Mebellar</h1>
-            <p>Sifatli materiallar, zamonaviy dizayn va qulaylik uyg'unligi.</p>
-            <a href="#katalog" class="btn btn-primary">Katalogga o'tish</a>
-        </div>
-    </section>
+<nav>
 
-    <!-- MAIN KATALOG -->
-    <main class="container" id="katalog">
-        <div class="section-header">
-            <h2>Bizning Mebellar Katalogi</h2>
-            
-            <!-- Kategoriya Filterlari -->
-            <div class="category-filters">
-                <button class="filter-btn active" data-category="all">Barchasi</button>
-                <button class="filter-btn" data-category="ofis">Ofis Mebellari</button>
-                <button class="filter-btn" data-category="yotoqxona">Yotoqxona</button>
-                <button class="filter-btn" data-category="mehmonxona">Mehmonxona</button>
-                <button class="filter-btn" data-category="javonlar">Javonlar</button>
-            </div>
-        </div>
+<a href="#">Bosh sahifa</a>
+<a href="#products">Mahsulotlar</a>
+<a href="#contact">Aloqa</a>
 
-        <!-- Mahsulotlar Kartochkalari Grid -->
-        <div class="product-grid" id="product-grid">
-            <!-- JavaScript orqali dinamik yuklanadi -->
-        </div>
-    </main>
+</nav>
 
-    <!-- SAVATCHA DRAWER (O'NG TOMONDAN CHIQADIGAN OYNA) -->
-    <div class="cart-overlay" id="cart-overlay"></div>
 
-    <aside class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h3><i class="fa-solid fa-cart-shopping"></i> Savatcha</h3>
-            <button class="close-cart-btn" id="close-cart-btn">&times;</button>
-        </div>
+<input 
+id="search" 
+type="text" 
+placeholder="🔍 Qidirish..."
+>
 
-        <!-- Savatchadagi mahsulotlar -->
-        <div class="cart-body" id="cart-items">
-            <!-- Dinamik kontent -->
-        </div>
 
-        <!-- Savatcha pastki qismi -->
-        <div class="cart-footer">
-            <div class="cart-summary">
-                <span>Jami summa:</span>
-                <strong id="cart-total-price">0 so'm</strong>
-            </div>
+<div class="cart">
 
-            <p class="payment-title">To'lov turini tanlang:</p>
-            <div class="payment-methods">
-                <button class="pay-btn payme" onclick="processPayment('Payme')">
-                    <span class="pay-logo">Payme</span>
-                </button>
-                <button class="pay-btn click" onclick="processPayment('Click')">
-                    <span class="pay-logo">Click</span>
-                </button>
-                <button class="pay-btn paynet" onclick="processPayment('Paynet')">
-                    <span class="pay-logo">Paynet</span>
-                </button>
-            </div>
+🛒 <span id="count">0</span>
 
-User not found, [26/07/2026 14:34]
-<button class="checkout-btn" onclick="processPayment('Naqd/Karta')">
-                Buyurtmani rasmiylashtirish
-            </button>
-        </div>
-    </aside>
+</div>
 
-    <!-- BIKXABAR (TOAST NOTIFICATION) -->
-    <div class="toast" id="toast">Mahsulot savatchaga qo'shildi!</div>
 
-    <script src="script.js"></script>
+</header>
+
+
+<section class="hero">
+
+<h1>
+Zamonaviy mebellar
+</h1>
+
+<p>
+Sifatli va chiroyli uy jihozlari
+</p>
+
+<button onclick="scrollProducts()">
+Mahsulotlarni ko'rish
+</button>
+
+</section>
+
+
+
+<section class="products" id="products">
+
+
+<div class="card">
+
+<img src="img/divan.jpg">
+
+<h2>Divan</h2>
+
+<p class="price">
+4 500 000 so'm
+</p>
+
+<button onclick="addCart('Divan',4500000)">
+Sotib olish
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="img/shkaf.jpg">
+
+<h2>Shkaf</h2>
+
+<p class="price">
+5 800 000 so'm
+</p>
+
+<button onclick="addCart('Shkaf',5800000)">
+Sotib olish
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="img/stol.jpg">
+
+<h2>Stol</h2>
+
+<p class="price">
+2 300 000 so'm
+</p>
+
+<button onclick="addCart('Stol',2300000)">
+Sotib olish
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="img/kreslo.jpg">
+
+<h2>Kreslo</h2>
+
+<p class="price">
+1 800 000 so'm
+</p>
+
+<button onclick="addCart('Kreslo',1800000)">
+Sotib olish
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="img/karovat.jpg">
+
+<h2>Karovat</h2>
+
+<p class="price">
+6 200 000 so'm
+</p>
+
+<button onclick="addCart('Karovat',6200000)">
+Sotib olish
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="img/komod.jpg">
+
+<h2>Komod</h2>
+
+<p class="price">
+2 700 000 so'm
+</p>
+
+<button onclick="addCart('Komod',2700000)">
+Sotib olish
+</button>
+
+</div>
+
+
+
+</section>
+
+
+
+<div id="cartBox">
+
+</div>
+
+
+
+<section id="contact" class="contact">
+
+<h2>
+Bog'lanish
+</h2>
+
+<p>
+📞 +998 90 0539939
+    +998 95 0449217
+</p>
+
+<p>
+📍 Toshkent
+</p>
+
+<p>
+📱 Telegram: @beo002
+</p>
+
+</section>
+
+
+
+<footer>
+
+<h2>
+🛋️ BAXODIR MEBEL
+</h2>
+
+<p>
+© 2026 BAXODIR MEBEL
+</p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
