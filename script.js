@@ -113,6 +113,32 @@ function scrollProducts(){
 
 document
 .getElementById("products")
+
+            function buyNow(){
+
+if(cart.length==0){
+
+alert("Savatcha bo'sh!");
+
+return;
+
+}
+
+let text="Assalomu alaykum!\n\nBuyurtma:\n\n";
+
+cart.forEach(item=>{
+
+text+=`${item.name} - ${item.price.toLocaleString()} so'm\n`;
+
+});
+
+text+=`\nJami: ${total.toLocaleString()} so'm`;
+
+window.open(
+"https://t.me/@beo002?text="+encodeURIComponent(text)
+);
+
+}
 .scrollIntoView({
 behavior:"smooth"
 });
