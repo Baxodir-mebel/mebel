@@ -3,60 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baxodir MEBEL</title>
+<title>BAXODIR MEBEL</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
 <header>
-<div class="logo">🛋️ Baxodir MEBEL</div>
+
+<div class="logo">
+🛋️ BAXODIR MEBEL
+</div>
 
 <nav>
+
 <a href="#">Bosh sahifa</a>
+
 <a href="#">Mahsulotlar</a>
+
+<a href="#">Chegirmalar</a>
+
 <a href="#">Aloqa</a>
+
 </nav>
-</header>
-  
-  <div class="cart-box">
-<button id="cartBtn">🛒 Savatcha (<span id="count">0</span>)</button>
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Mahsulot qidirish..."
+>
+
+<div class="cart">
+
+🛒
+<span id="count">0</span>
+
 </div>
+
+</header>
 
 <section class="hero">
-<h1>Zamonaviy mebellar</h1>
-<p>Eng sifatli mebellar bizda!</p>
-</section>
 
-<section class="products">
+<h1>
+Zamonaviy mebellar
+</h1>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600">
-<h2>Divan</h2>
-<p>4 500 000 so'm</p>
-<button>Sotib olish</button>
-</div>
+<p>
+Sifat • Qulaylik • Ishonch
+</p>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=601">
-<h2>Shkaf</h2>
-<p>5 800 000 so'm</p>
-<button>Sotib olish</button>
-</div>
+<button onclick="scrollProducts()">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=602">
-<h2>Stol</h2>
-<p>2 300 000 so'm</p>
-<button>Sotib olish</button>
-</div>
+Mahsulotlarni ko'rish
+
+</button>
 
 </section>
+
+<section
+class="products"
+id="products">
+
+<!-- DIVAN -->
+
+<div class="card">
+
+<img
+src="img/divan.jpg"
+alt="Divan">
+
+<h2>
+Divan
+</h2>
+
+<p class="price">
+4 500 000 so'm
+</p>
+
+<button
+onclick="addCart('Divan',4500000)">
+Sotib olish
+</button>
+
+</div>
+
+<!-- SHKAF -->
+
+<div class="card">
+
+<img
+src="img/shkaf.jpg"
+alt="Shkaf">
+
+<h2>
+Shkaf
+</h2>
+
+<p class="price">
+5 800 000 so'm
+</p>
+
+<button
+onclick="addCart('Shkaf',5800000)">
+Sotib olish
+</button>
+
+</div>
+
+<!-- STOL -->
+
+<div class="card">
+
+<img
+src="img/stol.jpg"
+alt="Stol">
+
+<h2>
+Stol
+</h2>
+
+<p class="price">
+2 300 000 so'm
+</p>
+
+<button
+onclick="addCart('Stol',2300000)">
+Sotib olish
+</button>
+
+</div>
+
+<!-- KRESLO -->
+
+<div class="card">
+
+<img
+src="img/kreslo.jpg"
+alt="Kreslo">
+
+<h2>
+Kreslo
+</h2>
+
+<p class="price">
+1 800 000 so'm
+</p>
+
+<button
+onclick="addCart('Kreslo',1800000)">
+Sotib olish
+</button>
+
+</div>
+
+<!-- KAROVAT -->
+
+<div class="card">
+
+<img
+src="img/karovat.jpg"
+alt="Karovat">
+
+<h2>
+Karovat
+</h2>
+
+<p class="price">
+6 200 000 so'm
+</p>
+
+<button
+onclick="addCart('Karovat',6200000)">
+Sotib olish
+</button>
+
+</div>
+
+<!-- KOMOD -->
+
+<div class="card">
+
+<img
+src="img/komod.jpg"
+alt="Komod">
+
+<h2>
+Komod
+</h2>
+
+<p class="price">
+2 700 000 so'm
+</p>
+
+<button
+onclick="addCart('Komod',2700000)">
+Sotib olish
+</button>
+
+</div>
+
+</section>
+
+<div id="cartBox"></div>
 
 <footer>
-© 2026 Baxodir MEBEL
+
+<h2>
+
+🛋️ BAXODIR MEBEL
+
+</h2>
+
+<p>
+
+📞 +998 90 123 45 67
+
+</p>
+
+<p>
+
+📍 Toshkent, O'zbekiston
+
+</p>
+
+<p>
+
+© 2026 BAXODIR MEBEL
+
+</p>
+
 </footer>
-  
+
 <script src="script.js"></script>
-  
+
 </body>
 </html>
