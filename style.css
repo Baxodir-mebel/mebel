@@ -120,7 +120,27 @@ margin-top:10px;
 .hero h1{
 font-size:30px;
 }
+.cart-box{
+position:fixed;
+top:20px;
+right:20px;
+z-index:999;
+}
 
+#cartBtn{
+background:#8B5A2B;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+cursor:pointer;
+font-size:18px;
+box-shadow:0 5px 10px rgba(0,0,0,.2);
+}
+
+#cartBtn:hover{
+background:#6b431e;
+}
 .products{
 grid-template-columns:1fr;
 }
