@@ -1,81 +1,76 @@
+// SAVATCHA
 let cart = [];
 let total = 0;
 
 const cartCount = document.getElementById("count");
-const cartBox = document.getElementById("cartBox");
-const search = document.getElementById("search");
 
-function addCart(name, price) {
-  cart.push({ name, price });
-  total += price;
-  cartCount.innerHTML = cart.length;
-  showCart();
-}
+function addToCart(name, price) {
+    cart.push({ name, price });
+    total += price;
 
-function showCart() {
-  let html = `<h2>🛒 Savatcha</h2>`;
-
-  cart.forEach((item, index) => {
-    html += `
-      <div class="item">
-        <h3>${item.name}</h3>
-        <p>${item.price.toLocaleString()} so'm</p>
-        <button onclick="removeItem(${index})">❌ O'chirish</button>
-      </div>
-    `;
-  });
-
-  html += `
-    <hr>
-    <h2>Jami: ${total.toLocaleString()} so'm</h2>
-    <button onclick="buyNow()">Buyurtma berish</button>
-  `;
-
-  cartBox.innerHTML = html;
-}
-
-function removeItem(index) {
-  total -= cart[index].price;
-  cart.splice(index, 1);
-  cartCount.innerHTML = cart.length;
-  showCart();
-}
-
-function buyNow() {
-  if (cart.length === 0) {
-    alert("Savatcha bo'sh!");
-    return;
-  }
-
-  let text = "Assalomu alaykum!\n\nBuyurtma:\n\n";
-
-  cart.forEach(item => {
-    text += `${item.name} - ${item.price.toLocaleString()} so'm\n`;
-  });
-
-  text += `\nJami: ${total.toLocaleString()} so'm`;
-
-  window.open(
-    "https://t.me/beo002?text=" + encodeURIComponent(text),
-    "_blank"
-  );
-}
-
-search.addEventListener("keyup", () => {
-  let value = search.value.toLowerCase();
-  let cards = document.querySelectorAll(".card");
-
-  cards.forEach(card => {
-    if (card.innerText.toLowerCase().includes(value)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
+    if (cartCount) {
+        cartCount.innerText = cart.length;
     }
-  });
+
+    alert(`${name} savatchaga qo'shildi!\nJami: ${total.toLocaleString()} so'm`);
+}
+
+// DARK MODE
+const darkBtn = document.getElementById("darkBtn");
+
+if (darkBtn) {
+    darkBtn.onclick = () => {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+            darkBtn.innerHTML = "☀";
+        } else {
+            darkBtn.innerHTML = "🌙";
+        }
+    };
+}
+
+// QIDIRUV
+const searchInput = document.getElementById("search");
+const cards = document.querySelectorAll(".card");
+
+if (searchInput) {
+    searchInput.addEventListener("keyup", () => {
+        let value = searchInput.value.toLowerCase();
+
+        cards.forEach(card => {
+            let title = card.querySelector("h3").innerText.toLowerCase();
+
+            if (title.includes(value)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+}
+
+// HEADER SCROLL
+window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header");
+
+    if (window.scrollY > 50) {
+        header.style.padding = "0 8%";
+        header.style.height = "70px";
+    } else {
+        header.style.height = "80px";
+    }
 });
 
-function scrollProducts() {
-  document.getElementById("products").scrollIntoView({
-    behavior: "smooth"
-  });
-}
+// SMOOTH SCROLL
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+
+        const id = link.getAttribute("href");
+
+        document.querySelector(id).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
