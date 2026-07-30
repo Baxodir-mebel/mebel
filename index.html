@@ -1,230 +1,479 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BAXODIR MEBEL</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
 <div class="logo">
-🛋️ BAXODIR MEBEL
+🛋️ <span>BAXODIR</span> MEBEL
 </div>
-
 
 <nav>
 
 <a href="#">Bosh sahifa</a>
+
 <a href="#products">Mahsulotlar</a>
+
+<a href="#about">Biz haqimizda</a>
+
 <a href="#contact">Aloqa</a>
 
 </nav>
 
+<div class="icons">
 
-<input 
-id="search" 
-type="text" 
-placeholder="🔍 Qidirish..."
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+id="search"
+placeholder="Qidirish..."
 >
 
+</div>
+
+<button class="darkBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
 
 <div class="cart">
 
-🛒 <span id="count">0</span>
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="count">0</span>
 
 </div>
 
+</div>
 
 </header>
 
-
 <section class="hero">
 
+<div class="hero-text">
+
 <h1>
-Zamonaviy mebellar
+
+Zamonaviy
+<br>
+Mebel
+<br>
+To'plami
+
 </h1>
 
 <p>
-Sifatli va chiroyli uy jihozlari qolgan narsalar uchun telegram orqali bizga murojat qiling.
-    Bizni tanlaganingiz uchun rahmat
+
+Uy va ofisingiz uchun
+eng zamonaviy,
+sifatli va qulay
+mebellar.
+
 </p>
 
-<button onclick="scrollProducts()">
+<a href="#products">
+
+<button>
+
 Mahsulotlarni ko'rish
+
 </button>
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="img/banner.png">
+
+</div>
 
 </section>
 
+<section class="categories">
 
+<h2>
 
-<section class="products" id="products">
+Kategoriyalar
 
+</h2>
 
-<div class="card">
+<div class="category-box">
 
-<img src="img/divan.jpg">
+<div class="cat">
+🛏️
+<p>Karovat</p>
+</div>
 
-<h2>Divan</h2>
+<div class="cat">
+🛋️
+<p>Divan</p>
+</div>
+
+<div class="cat">
+🪑
+<p>Stol</p>
+</div>
+
+<div class="cat">
+🚪
+<p>Shkaf</p>
+</div>
+
+<div class="cat">
+🍽️
+<p>Oshxona</p>
+</div>
+
+</div>
+
+</section>
+
+<section
+class="products"
+id="products">
+
+<h2>
+
+Mashhur Mahsulotlar
+
+</h2>
+
+<div class="product-grid">
+    <!-- DIVAN -->
+
+<a href="divan.html" class="card">
+
+<img src="img/divan.jpg" alt="Divan">
+
+<div class="info">
+
+<h3>Premium Divan</h3>
 
 <p class="price">
-9 600 000 so'm
+4 500 000 so'm
 </p>
 
-<button onclick="addCart('Divan',9600000)">
+<div class="stars">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+<button onclick="addCart('Premium Divan',4500000);event.preventDefault();">
+
 Sotib olish
+
 </button>
 
 </div>
 
+</a>
 
+<!-- KAROVAT -->
 
-<div class="card">
-
-<img src="img/shkaf.jpg">
-
-<h2>Shkaf</h2>
-
-<p class="price">
-1 800 000 so'm
-</p>
-
-<button onclick="addCart('Shkaf',1800000)">
-Sotib olish
-</button>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="img/Kreslo stol.jpg">
-
-<h2>parta</h2>
-
-<p class="price">
-980 000 so'm
-</p>
-
-<button onclick="addCart('parta',980000)">
-Sotib olish
-</button>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="img/trimo.jpg">
-
-<h2>trimo</h2>
-
-<p class="price">
-1 800 000 so'm
-</p>
-
-<button onclick="addCart('trimo',1800000)">
-Sotib olish
-</button>
-
-</div>
-
-
-
-<div class="card">
+<a href="karovat.html" class="card">
 
 <img src="img/karovat.jpg">
 
-<h2>Karovat</h2>
+<div class="info">
+
+<h3>Premium Karovat</h3>
 
 <p class="price">
-7 500 000 so'm
+6 200 000 so'm
 </p>
 
-<button onclick="addCart('Karovat',7500000)">
+<div class="stars">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+<button onclick="addCart('Premium Karovat',6200000);event.preventDefault();">
+
 Sotib olish
+
 </button>
 
 </div>
 
+</a>
 
+<!-- SHKAF -->
 
-<div class="card">
+<a href="shkaf.html" class="card">
 
-<img src="img/oshxona nabor.jpg">
+<img src="img/shkaf.jpg">
 
-<h2>oshxona nabor KV metr</h2>
+<div class="info">
+
+<h3>Premium Shkaf</h3>
 
 <p class="price">
-2 800 000 so'm
+5 800 000 so'm
 </p>
 
-<button onclick="addCart('oshxona nabor',2800000)">
+<div class="stars">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+<button onclick="addCart('Premium Shkaf',5800000);event.preventDefault();">
+
 Sotib olish
+
 </button>
 
 </div>
 
+</a>
 
+<!-- STOL -->
+
+<a href="stol.html" class="card">
+
+<img src="img/stol.jpg">
+
+<div class="info">
+
+<h3>Yog'och Stol</h3>
+
+<p class="price">
+2 300 000 so'm
+</p>
+
+<div class="stars">
+
+⭐⭐⭐⭐☆
+
+</div>
+
+<button onclick="addCart('Yogoch Stol',2300000);event.preventDefault();">
+
+Sotib olish
+
+</button>
+
+</div>
+
+</a>
+
+<!-- OSHXONA -->
+
+<a href="oshxona.html" class="card">
+
+<img src="img/oshxona_nabor.jpg">
+
+<div class="info">
+
+<h3>Oshxona Nabori</h3>
+
+<p class="price">
+7 900 000 so'm
+</p>
+
+<div class="stars">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+<button onclick="addCart('Oshxona Nabori',7900000);event.preventDefault();">
+
+Sotib olish
+
+</button>
+
+</div>
+
+</a>
+
+</div>
+</section>
+<!-- BIZ HAQIMIZDA -->
+
+<section id="about" class="about">
+
+<h2>Biz haqimizda</h2>
+
+<p>
+
+BAXODIR MEBEL — zamonaviy, sifatli va ishonchli
+mebellarni qulay narxlarda taqdim etadi.
+Bizning maqsadimiz har bir uyni yanada
+chiroyli va shinam qilish.
+
+</p>
+
+<div class="about-box">
+
+<div class="about-card">
+🚚
+<h3>Tez yetkazib berish</h3>
+<p>Butun O'zbekiston bo'ylab.</p>
+</div>
+
+<div class="about-card">
+⭐
+<h3>Yuqori sifat</h3>
+<p>Faqat ishonchli mahsulotlar.</p>
+</div>
+
+<div class="about-card">
+💰
+<h3>Qulay narx</h3>
+<p>Eng yaxshi takliflar.</p>
+</div>
+
+</div>
 
 </section>
 
+<!-- MIJOZLAR FIKRI -->
 
+<section class="reviews">
 
-<div id="cartBox">
+<h2>Mijozlar fikri</h2>
+
+<div class="review-box">
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>"Juda sifatli mebel, tavsiya qilaman!"</p>
+<h4>- Azizbek</h4>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>"Narxi ham yaxshi, yetkazib berish tez."</p>
+<h4>- Dilshod</h4>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐☆
+<p>"Xizmat juda yoqdi."</p>
+<h4>- Madina</h4>
+</div>
 
 </div>
 
+</section>
 
+<!-- ALOQA -->
 
 <section id="contact" class="contact">
 
-<h2>
-Bog'lanish
-</h2>
+<h2>Biz bilan bog'laning</h2>
 
-<p>
-📞 +998 90 0539939
-    +998 95 0449217
-</p>
+<p>📞 +998 90 000 00 00</p>
 
-<p>
-📍 Toshkent
-</p>
+<p>📍 Toshkent shahri</p>
 
-<p>
-📱 Telegram: @beo002
-</p>
+<p>📨 Telegram: @beo002</p>
+
+<a href="https://t.me/beo002">
+
+<button>
+
+Telegram orqali yozish
+
+</button>
+
+</a>
+
+</section>
+<!-- XARITA -->
+
+<section class="map">
+
+<h2>Bizning manzil</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Tashkent&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:20px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
 
 </section>
 
-
+<!-- FOOTER -->
 
 <footer>
 
-<h2>
+<div class="footer-logo">
+
 🛋️ BAXODIR MEBEL
-</h2>
+
+</div>
 
 <p>
-© 2026 BAXODIR MEBEL
+
+Sifatli mebellar • Zamonaviy dizayn • Ishonchli xizmat
+
+</p>
+
+<div class="social">
+
+<a href="https://t.me/beo002">
+Telegram
+</a>
+
+<a href="#">
+Instagram
+</a>
+
+<a href="#">
+YouTube
+</a>
+
+</div>
+
+<p>
+
+© 2026 BAXODIR MEBEL.
+Barcha huquqlar himoyalangan.
+
 </p>
 
 </footer>
 
+<!-- TEPAGA QAYTISH -->
 
+<button id="topBtn">
+
+⬆
+
+</button>
+
+<div id="cartBox"></div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
