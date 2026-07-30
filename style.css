@@ -379,6 +379,26 @@ font-size:17px;
 
 .products,
 .about,
+  #topBtn{
+position:fixed;
+bottom:25px;
+right:25px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#ff7b00;
+color:white;
+font-size:22px;
+cursor:pointer;
+display:none;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+transition:.3s;
+}
+
+#topBtn:hover{
+transform:scale(1.1);
+}
 .contact{
 padding:80px 5%;
 }
