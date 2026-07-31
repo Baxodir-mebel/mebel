@@ -7,13 +7,9 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -32,23 +28,29 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <a href="#contact">Aloqa</a>
 </nav>
 
-<div class="icons">
+<div class="right">
 
-<div class="search-box">
+<div class="search">
+
 <i class="fa-solid fa-magnifying-glass"></i>
+
 <input
 type="text"
 id="search"
-placeholder="Mahsulot qidirish...">
+placeholder="Qidirish...">
+
 </div>
 
-<button class="darkBtn" id="darkBtn">
+<button id="darkBtn">
 <i class="fa-solid fa-moon"></i>
 </button>
 
 <div class="cart">
+
 <i class="fa-solid fa-cart-shopping"></i>
+
 <span id="count">0</span>
+
 </div>
 
 </div>
@@ -57,53 +59,57 @@ placeholder="Mahsulot qidirish...">
 
 <section class="hero" id="home">
 
-<div class="hero-text">
+<div class="heroText">
 
 <h1>
-Zamonaviy <br>
-Mebel <br>
-To'plami
+Premium
+<br>
+Mebel
+<br>
+Do'koni
 </h1>
 
 <p>
-Sifatli va zamonaviy mebellarni
-eng qulay narxlarda xarid qiling.
+
+Eng sifatli va zamonaviy
+mebellar faqat
+BAXODIR MEBEL da.
+
 </p>
 
-<a href="#products">
-<button>Mahsulotlarni ko'rish</button>
-</a>
+<button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+
+Ko'rish
+
+</button>
 
 </div>
 
-<div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
-         alt="Premium mebel showroom">
+<div class="heroImg">
+
+<img src="img/banner.jpg">
+
 </div>
 
 </section>
 
 <section class="products" id="products">
 
-<h2 class="title">
+<h2>
+
 Mashhur Mahsulotlar
+
 </h2>
 
-<div class="product-grid">
+<div class="grid">
 
 <div class="card">
 
-<img src="img/divan.jpg" alt="Divan">
+<img src="img/divan.jpg">
 
 <h3>Premium Divan</h3>
 
-<p>
-Juda qulay va zamonaviy divan.
-</p>
-
-<div class="price">
-4 500 000 so'm
-</div>
+<p>4 500 000 so'm</p>
 
 <button onclick="addToCart('Premium Divan',4500000)">
 Sotib olish
@@ -113,151 +119,105 @@ Sotib olish
 
 <div class="card">
 
-<img src="img/karovat.jpg" alt="Karovat">
+<img src="img/karovat.jpg">
 
 <h3>Premium Karovat</h3>
 
-<p>
-Yumshoq va sifatli karovat.
-</p>
-
-<div class="price">
-6 200 000 so'm
-</div>
+<p>6 200 000 so'm</p>
 
 <button onclick="addToCart('Premium Karovat',6200000)">
 Sotib olish
 </button>
 
 </div>
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAXODIR MEBEL</title>
+<div class="card">
 
-<link rel="stylesheet" href="style.css">
+<img src="img/shkaf.jpg" alt="Premium Shkaf">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<h3>Premium Shkaf</h3>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<p>5 800 000 so'm</p>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<div class="logo">
-🛋️ <span>BAXODIR</span> MEBEL
-</div>
-
-<nav>
-<a href="#home">Bosh sahifa</a>
-<a href="#products">Mahsulotlar</a>
-<a href="#about">Biz haqimizda</a>
-<a href="#contact">Aloqa</a>
-</nav>
-
-<div class="icons">
-
-<div class="search-box">
-<i class="fa-solid fa-magnifying-glass"></i>
-<input
-type="text"
-id="search"
-placeholder="Mahsulot qidirish...">
-</div>
-
-<button class="darkBtn" id="darkBtn">
-<i class="fa-solid fa-moon"></i>
+<button onclick="addToCart('Premium Shkaf',5800000)">
+Sotib olish
 </button>
 
-<div class="cart">
-<i class="fa-solid fa-cart-shopping"></i>
-<span id="count">0</span>
 </div>
 
-</div>
+<div class="card">
 
-</header>
+<img src="img/stol.jpg" alt="Yog'och Stol">
 
-<section class="hero" id="home">
+<h3>Yog'och Stol</h3>
 
-<div class="hero-text">
+<p>2 300 000 so'm</p>
 
-<h1>
-Zamonaviy <br>
-Mebel <br>
-To'plami
-</h1>
-
-<p>
-Sifatli va zamonaviy mebellarni
-eng qulay narxlarda xarid qiling.
-</p>
-
-<a href="#products">
-<button>Mahsulotlarni ko'rish</button>
-</a>
+<button onclick="addToCart('Yogoch Stol',2300000)">
+Sotib olish
+</button>
 
 </div>
 
-<div class="hero-image">
-<img src="img/banner.jpg" alt="Banner">
+<div class="card">
+
+<img src="img/oshxona.jpg" alt="Oshxona Nabori">
+
+<h3>Oshxona Nabori</h3>
+
+<p>7 900 000 so'm</p>
+
+<button onclick="addToCart('Oshxona Nabori',7900000)">
+Sotib olish
+</button>
+
+</div>
+
 </div>
 
 </section>
 
-<section class="products" id="products">
+<section id="about" class="about">
 
-<h2 class="title">
-Mashhur Mahsulotlar
-</h2>
-
-<div class="product-grid">
-
-<div class="card">
-
-<img src="img/divan.jpg" alt="Divan">
-
-<h3>Premium Divan</h3>
+<h2>Biz haqimizda</h2>
 
 <p>
-Juda qulay va zamonaviy divan.
+BAXODIR MEBEL sizga zamonaviy,
+sifatli va ishonchli mebellarni
+eng qulay narxlarda taqdim etadi.
 </p>
 
-<div class="price">
-4 500 000 so'm
-</div>
+</section>
 
-<button onclick="addToCart('Premium Divan',4500000)">
-Sotib olish
-</button>
+<section id="contact" class="contact">
 
-</div>
+<h2>Bog'lanish</h2>
 
-<div class="card">
+<p>📞 +998 90 000 00 00</p>
 
-<img src="img/karovat.jpg" alt="Karovat">
+<p>📍 Toshkent shahri</p>
 
-<h3>Premium Karovat</h3>
+<p>📨 Telegram: @beo002</p>
+
+<a href="https://t.me/beo002" target="_blank">
+
+<button>Telegram orqali yozish</button>
+
+</a>
+
+</section>
+
+<footer>
 
 <p>
-Yumshoq va sifatli karovat.
+© 2026 BAXODIR MEBEL.
+Barcha huquqlar himoyalangan.
 </p>
 
-<div class="price">
-6 200 000 so'm
-</div>
+</footer>
 
-<button onclick="addToCart('Premium Karovat',6200000)">
-Sotib olish
-</button>
+<button id="topBtn">⬆</button>
 
-</div>
+<script src="script.js"></script>
+
+</body>
+</html>
